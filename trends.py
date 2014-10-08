@@ -45,16 +45,14 @@ def make_tweet(text, time, lat, lon):
 
 def tweet_text(tweet):
     """Return a string, the words in the text of a tweet."""
-    "*** YOUR CODE HERE ***"
+    return tweet[0]
 
 def tweet_time(tweet):
     """Return the datetime representing when a tweet was posted."""
-    "*** YOUR CODE HERE ***"
-
+    return tweet[1]
 def tweet_location(tweet):
     """Return a position representing a tweet's location."""
-    "*** YOUR CODE HERE ***"
-
+    return make_position(tweet[2], tweet[3])
 
 # tweet data abstraction (B), represented as a function
 # -----------------------------------------------------
@@ -71,7 +69,10 @@ def make_tweet_fn(text, time, lat, lon):
     122
     """
     # Please don't call make_tweet in your solution
-    "*** YOUR CODE HERE ***"
+    def inside(info):
+        tweet_var = {'text' : text, 'time' : time, 'lat' : lat, 'lon' : lon}
+        return tweet_var[info]
+    return inside
 
 def tweet_text_fn(tweet):
     """Return a string, the words in the text of a functional tweet."""
@@ -111,8 +112,13 @@ def extract_words(text):
     >>> extract_words('@(cat$.on^#$my&@keyboard***@#*')
     ['cat', 'on', 'my', 'keyboard']
     """
-    "*** YOUR CODE HERE ***"
-    return text.split()  # You may change/remove this line
+    result = ''
+    for letter in text:
+        if letter not in ascii_letters:
+            result += ' '
+        else:
+            result += letter
+    return result.split()  # You may change/remove this line
 
 def make_sentiment(value):
     """Return a sentiment, which represents a value that may not exist.
@@ -132,16 +138,18 @@ def make_sentiment(value):
     0
     """
     assert (value is None) or (-1 <= value <= 1), 'Bad sentiment value'
-    "*** YOUR CODE HERE ***"
+    return value
 
 def has_sentiment(s):
     """Return whether sentiment s has a value."""
-    "*** YOUR CODE HERE ***"
+    if s == None:
+        return False
+    return True
 
 def sentiment_value(s):
     """Return the value of a sentiment s."""
     assert has_sentiment(s), 'No sentiment value'
-    "*** YOUR CODE HERE ***"
+    return s 
 
 def get_word_sentiment(word):
     """Return a sentiment representing the degree of positive or negative
@@ -177,7 +185,7 @@ def analyze_tweet_sentiment(tweet):
     >>> has_sentiment(analyze_tweet_sentiment(no_sentiment))
     False
     """
-    "*** YOUR CODE HERE ***"
+
     return make_sentiment(None)
 
 
