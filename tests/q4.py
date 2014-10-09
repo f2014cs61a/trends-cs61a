@@ -18,7 +18,7 @@ test = {
   'suites': [
     [
       {
-        'answer': '3eca824debf5609b1bc6e77cc4cad289',
+        'answer': 'get_word_sentiment',
         'choices': [
           'get_word_sentiment',
           'make_sentiment',
@@ -26,7 +26,6 @@ test = {
           'extract_words',
           'make_tweet'
         ],
-        'locked': True,
         'question': """
         What function will take a string (a word) and return
         the associated sentiment?
@@ -34,25 +33,23 @@ test = {
         'type': 'concept'
       },
       {
-        'answer': '8d51a1b17fa3121161546de50ba0d03f',
+        'answer': 'A sentiment object',
         'choices': [
           'A sentiment object',
           'A number from -1 to 1',
           'A number from -1 to 1, or None if no sentiment',
           'A tweet'
         ],
-        'locked': True,
         'question': 'What type of object does analyze_tweet_sentiment return?',
         'type': 'concept'
       },
       {
-        'answer': 'ec83923648c22e04bff47eb445379205',
+        'answer': 'make_sentiment(None)',
         'choices': [
           'make_sentiment(None)',
           '0',
           'sentiment_value(None)'
         ],
-        'locked': True,
         'question': """
         If a tweet has no words with sentiments, what should
         analyze_tweet_sentiment return?

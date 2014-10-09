@@ -15,13 +15,12 @@ test = {
   'suites': [
     [
       {
-        'answer': 'b240ba945afdbb187e1d0b78e22c3009',
+        'answer': 'A position object',
         'choices': [
           'A position object',
           'The latitude and longitude',
           'A list of polygons'
         ],
-        'locked': True,
         'question': 'What type of object does find_state_center return?',
         'type': 'concept'
       },

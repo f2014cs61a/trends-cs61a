@@ -15,35 +15,32 @@ test = {
   'suites': [
     [
       {
-        'answer': '7762d7446517474db3bcffa2579f36ee',
+        'answer': 'The latitude, longitude, and area',
         'choices': [
           'The latitude, longitude, and area',
           'The area of the polygon',
           'A position object with the calculated latitude and longitude',
           'latitude and longitude'
         ],
-        'locked': True,
         'question': 'What should find_centroid return?',
         'type': 'concept'
       },
       {
-        'answer': '89b05f9d90c18f4e1a9733b430223f1c',
+        'answer': 'x is the latitude, y is the longitude',
         'choices': [
           'x is the latitude, y is the longitude',
           'x is the longitude, y is the latitude'
         ],
-        'locked': True,
         'question': 'The formula on Wikipedia uses variables x and y. What do these represent?',
         'type': 'concept'
       },
       {
-        'answer': '77fd56e449e11b19fe96ee8c138855a8',
+        'answer': 'They should be the latitude and longitude of the first position',
         'choices': [
           'They should be the latitude and longitude of the first position',
           'They should both be 0',
           'They should be the latitude and longitude calculated by the formula'
         ],
-        'locked': True,
         'question': """
         If the area of the polygon is 0, what should the
         latitude and longitude be?
@@ -51,14 +48,13 @@ test = {
         'type': 'concept'
       },
       {
-        'answer': 'e6551158209eadef1c7dde8895e94a3a',
+        'answer': 'After calculating latitude and longitude with the negative area, take the absolute value of the area',
         'choices': [
           'After calculating latitude and longitude with the negative area, take the absolute value of the area',
           'Before calculating latitude and longitude with the negative area, take the absolute value of the area',
           'Leave the area as a negative number',
           'This will never happen given the formula'
         ],
-        'locked': True,
         'question': 'How would you handle a negative area?',
         'type': 'concept'
       },

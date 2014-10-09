@@ -185,8 +185,18 @@ def analyze_tweet_sentiment(tweet):
     >>> has_sentiment(analyze_tweet_sentiment(no_sentiment))
     False
     """
-
-    return make_sentiment(None)
+    text = tweet_words(tweet)
+    total = 0
+    count = 0
+    for word in text:
+        sentiment = get_word_sentiment(word)
+        
+        if has_sentiment(sentiment):
+            count += 1
+            total += sentiment_value(sentiment)
+    if count == 0:
+        return make_sentiment(None)
+    return make_sentiment(total / count)
 
 
 #################################
